@@ -1,0 +1,22 @@
+server:
+  port: 82
+
+
+spring:
+  application:
+    name: elasticsearch-demo
+  gson:
+    serialize-nulls: true
+  cloud:
+    consul:
+      host: ${CONSUL_HOST:localhost}
+      port: ${CONSUL_PORT:30524}
+      discovery:
+        deregister: true
+        enabled: true
+        healthCheckPath: /actuator/health
+
+
+es:
+  host: localhost
+  port: 9200
